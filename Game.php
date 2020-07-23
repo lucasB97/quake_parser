@@ -46,12 +46,13 @@ class Game{
     }
 
     public function JSON() {
-        $data = array(
+        $json_str = array(
             'total_kills' => $this->getTotalKills(),
             'players' => $this->getPlayers(),
             'kills' => $this->getKills());
-        $game = array('game_' . $this->getId() => $data);
+        $game = array('game_' . $this->getId() => $json_str);
         return json_encode($game, JSON_PRETTY_PRINT);
+        //"JSON_PRETTY_PRINT" formata os dados retornados com espaços em branco.
     }
 
 
