@@ -32,7 +32,7 @@ class Parser{
 			$this->readArquivo($arquivo);
 
 			//Fecha um ponteiro de arquivo aberto
-			$this->fclose($arquivo);
+			fclose($arquivo);
 		} catch(Exception $e){
 			echo $e->getMessage();
 		}
@@ -95,7 +95,7 @@ class Parser{
 		$this->kills = array();
 
         //adicione 1 para definir gameID
-		$this->countGame = $countGame + 1;
+		$this->countGame ++;
 
 		//Define a id do game
 		$this->game->setId($this->countGame);
@@ -161,7 +161,7 @@ class Parser{
 
 	}
 
-	private function exibirJsonGame(){
+	public function exibirJsonGame(){
 		foreach ($this->jsonGame as $j) {
 			echo '<pre>';
             echo  $j;

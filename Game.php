@@ -37,7 +37,7 @@ class Game{
     }
 
     public function setKills($kills){
-    	$this->kills = $kills
+    	$this->kills = $kills;
 
     }
 
