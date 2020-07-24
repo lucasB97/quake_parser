@@ -1,0 +1,8 @@
+#O .htaccess é o arquivo de configuração de diretório do apache
+
+<IfModule mod_rewrite.c>
+#"RewriteEngine"ativar o módulo de Reescrita da URL
+RewriteEngine On
+#"RewriteRule" faz a reescrita da URL
+RewriteRule ^([^/]*)$ /quake_parser/Api/indexAPI.php/$1 [L]
+</IfModule>
