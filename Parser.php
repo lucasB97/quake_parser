@@ -161,6 +161,7 @@ class Parser{
 
 	}
 
+
 	public function exibirJsonGame(){
 		foreach ($this->jsonGame as $j) {
 			echo '<pre>';
@@ -169,9 +170,25 @@ class Parser{
 		}
 	}
 
+	
 	public function getJsonGame() {
         return $this->jsonGame;
     }
+
+
+
+    public function getRelatorio() {
+        $games = $this->jsonGame;
+        $games_array = "";
+        foreach ($games as $value) {
+            $games_array .= $value ."<br><br>";
+        }
+        echo ($games_array);
+    }
+
+
+    
+
 
 
 
